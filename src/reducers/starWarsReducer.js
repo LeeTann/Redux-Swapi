@@ -27,6 +27,7 @@ export const charsReducer = (state = initialState, action) => {
     case FETCH_FAILURE:
       return{
         ...state,
+        isFetching: false,
         error: action.payload
       }   
     default:
